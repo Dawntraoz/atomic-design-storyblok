@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Slug page {{ $route.params.language }}</h1>
+    <Heading tag="h1" :content="`Slug page ${$route.params.language}`" />
   </div>
 </template>
 

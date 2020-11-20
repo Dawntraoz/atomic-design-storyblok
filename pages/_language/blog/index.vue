@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="title">Blog {{ $route.params.language }}</h1>
+    <Heading tag="h1" :content="`Blog ${$route.params.language}`" />
   </div>
 </template>
 
