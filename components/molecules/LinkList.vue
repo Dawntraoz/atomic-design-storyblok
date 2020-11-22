@@ -1,7 +1,12 @@
 <template>
   <ul :class="classes">
     <li v-for="link in links" :key="link.content">
-      <Link v-if="!link.external" :link="link.link" :content="link.content" />
+      <Link
+        v-if="!link.external"
+        :link="link.link"
+        :content="link.content"
+        :white="link.white"
+      />
       <ExternalLink
         v-else
         :link="link.link"

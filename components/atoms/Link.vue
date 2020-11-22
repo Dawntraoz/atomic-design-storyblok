@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="hover:text-blue-600 text-gray-500" :to="link">
+  <nuxt-link :class="{ 'link-gray': !white, 'link-white': white }" :to="link">
     {{ content }}
   </nuxt-link>
 </template>
@@ -15,6 +15,19 @@ export default {
       type: String,
       required: true,
     },
+    white: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>
+
+<style scoped>
+.link-gray {
+  @apply hover:text-blue-600 text-gray-500;
+}
+.link-white {
+  @apply hover:text-gray-100 text-white;
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-white">
     <div class="container pt-32 pb-12 flex flex-wrap text-gray-500">
-      <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
+      <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 pb-6">
         <Heading tag="h2" content="Blokim" />
         <Paragraph
           content="Nuxt.js lets you define the CSS files/modules/libraries you want to
@@ -13,11 +13,15 @@
       <LinkSection title="Contact" :links="links.contact" />
     </div>
     <div class="py-6 bg-gradient-to-tr from-blue-700 to-blue-800 text-white">
-      <div class="container flex justify-between">
+      <div class="container flex flex-wrap justify-between">
         <Paragraph
           :content="`© Blokim - ${new Date().getFullYear()} All Rights Reserved`"
+          class="pr-4"
         />
-        <LinkList classes="flex space-x-2" :links="languages" />
+        <LinkList
+          classes="order-first md:order-none flex space-x-3"
+          :links="languages"
+        />
       </div>
     </div>
   </footer>
@@ -81,8 +85,8 @@ export default {
         ],
       },
       languages: [
-        { link: '/', content: 'EN' },
-        { link: '/es', content: 'ES' },
+        { link: '/', content: 'EN', white: true },
+        { link: '/es', content: 'ES', white: true },
       ],
     }
   },

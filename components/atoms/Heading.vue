@@ -23,9 +23,9 @@ export default {
   data() {
     return {
       classes: {
-        h1: 'text-6xl',
-        h2: 'text-4xl',
-        h3: 'text-2xl',
+        h1: 'text-5xl md:text-6xl',
+        h2: 'text-3xl md:text-4xl',
+        h3: 'text-xl md:text-2xl',
         h4: 'text-xl',
         h5: 'text-lg',
         h6: 'text-base',
