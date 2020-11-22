@@ -16,9 +16,9 @@ export default {
     const version =
       context.query._storyblok || context.isDev ? 'draft' : 'published'
 
-    // Load the JSON from the API - loadig the home content (index page)
+    // Load the JSON from the API - loadig the page content (any other page)
     return context.app.$storyapi
-      .get('cdn/stories/home', {
+      .get('cdn/stories/en/home', {
         version,
       })
       .then((res) => {

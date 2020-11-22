@@ -1,17 +1,26 @@
 <template>
-  <nuxt-link class="hover:text-blue-600 text-gray-500" :to="link">
+  <a
+    class="hover:text-blue-600 text-gray-500"
+    target="_blank"
+    :href="link"
+    :alt="alt"
+  >
     {{ content }}
-  </nuxt-link>
+  </a>
 </template>
 
 <script>
 export default {
   props: {
+    content: {
+      type: String,
+      required: true,
+    },
     link: {
       type: String,
       required: true,
     },
-    content: {
+    alt: {
       type: String,
       required: true,
     },

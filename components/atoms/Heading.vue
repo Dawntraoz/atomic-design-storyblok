@@ -1,5 +1,9 @@
 <template>
-  <component :is="tag" :class="classes[tag]" class="font-title font-bold pb-2">
+  <component
+    :is="tag"
+    :class="classes[tag]"
+    class="font-title font-bold text-gray-900 pb-4"
+  >
     {{ content }}
   </component>
 </template>
