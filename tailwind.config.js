@@ -10,13 +10,22 @@ module.exports = {
         title: ['Gilroy Bold', 'sans-serif'],
         text: ["'Quicksand'", 'sans-serif'],
       },
+      borderRadius: {
+        medium: '14px',
+        large: '20px',
+      },
+      borderWidth: {
+        16: '16px',
+      },
+      boxShadow: {
+        '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.1)',
+      },
     },
     screens: {
       sm: '640px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
-      '2xl': '1536px',
     },
     colors: {
       transparent: 'transparent',

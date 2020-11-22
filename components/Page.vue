@@ -1,10 +1,13 @@
 <template>
   <div v-editable="blok" class="px-6">
+    <header class="container text-center">
+      <Heading v-if="blok.title" tag="h1" :content="blok.title" />
+    </header>
     <component
       :is="blok.component"
-      v-for="body in blok.body"
-      :key="body._uid"
-      :blok="body"
+      v-for="blok in blok.body"
+      :key="blok._uid"
+      :blok="blok"
     />
   </div>
 </template>

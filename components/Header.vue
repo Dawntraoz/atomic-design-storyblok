@@ -1,17 +1,23 @@
 <template>
   <header class="py-6">
-    <nav class="container">
-      <ul class="flex py-2 space-x-8">
-        <li>
-          <Link link="/" content="Home" />
-        </li>
-        <li>
-          <Link link="/en/blog" content="Blog EN" />
-        </li>
-        <li>
-          <Link link="/es/blog" content="Blog ES" />
-        </li>
-      </ul>
+    <nav class="container flex justify-between">
+      <nuxt-link to="/">
+        <Heading tag="h2" content="Blokim" />
+      </nuxt-link>
+      <LinkList class="flex py-2 space-x-12" :links="links" />
     </nav>
   </header>
 </template>
+
+<script>
+export default {
+  computed: {
+    links() {
+      return [
+        { link: '/en/blog', content: 'Blog' },
+        { link: '/en/our-services', content: 'Our services' },
+      ]
+    },
+  },
+}
+</script>

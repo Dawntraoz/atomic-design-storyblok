@@ -23,12 +23,12 @@ export default {
   data() {
     return {
       classes: {
-        h1: 'text-5xl md:text-6xl',
-        h2: 'text-3xl md:text-4xl',
-        h3: 'text-xl md:text-2xl',
-        h4: 'text-xl',
-        h5: 'text-lg',
-        h6: 'text-base',
+        h1: 'text-5xl md:text-7xl capitalize',
+        h2: 'text-3xl md:text-5xl capitalize',
+        h3: 'text-xl md:text-3xl capitalize',
+        h4: 'text-lg md:text-xl capitalize',
+        h5: 'text-base md:text-lg tracking-widest text-blue-600 uppercase',
+        h6: 'text-md md:text-base',
       },
     }
   },

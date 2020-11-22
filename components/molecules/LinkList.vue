@@ -1,5 +1,5 @@
 <template>
-  <ul :class="classes">
+  <ul>
     <li v-for="link in links" :key="link.content">
       <Link
         v-if="!link.external"
@@ -20,10 +20,6 @@
 <script>
 export default {
   props: {
-    classes: {
-      type: String,
-      required: true,
-    },
     links: {
       type: Array,
       required: true,

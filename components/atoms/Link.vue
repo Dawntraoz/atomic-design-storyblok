@@ -25,9 +25,19 @@ export default {
 
 <style scoped>
 .link-gray {
-  @apply hover:text-blue-600 text-gray-500;
+  @apply hover:text-blue-600 focus:text-blue-600 text-gray-500;
+}
+.link-gray.nuxt-link-exact-active {
+  @apply border-blue-600 text-blue-600;
 }
 .link-white {
-  @apply hover:text-gray-100 text-white;
+  @apply hover:text-gray-100 focus:text-gray-100 text-white;
+}
+.link-white.nuxt-link-exact-active {
+  @apply border-gray-100 text-gray-100;
+}
+/* Exact internal link active */
+.nuxt-link-exact-active {
+  @apply border-b-2;
 }
 </style>
