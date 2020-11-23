@@ -27,7 +27,7 @@ export default {
         h2: 'text-3xl md:text-5xl capitalize',
         h3: 'text-xl md:text-3xl capitalize',
         h4: 'text-lg md:text-xl capitalize',
-        h5: 'text-base md:text-lg tracking-widest text-blue-600 uppercase',
+        h5: 'text-base md:text-lg',
         h6: 'text-md md:text-base',
       },
     }

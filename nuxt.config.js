@@ -4,11 +4,16 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'atomic-design-storyblok',
+    title: 'Atomic Design | Storyblok',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Get Benefits Using Atomic Design in your Storyblok Headless CMS',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -43,6 +48,12 @@ export default {
       },
     ],
   ],
+
+  pwa: {
+    meta: {
+      theme_color: '#3B82F6',
+    },
+  },
 
   i18n: {
     locales: [

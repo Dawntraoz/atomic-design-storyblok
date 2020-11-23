@@ -2,6 +2,7 @@
   <a
     class="hover:text-blue-600 text-gray-500"
     target="_blank"
+    rel="noopener noreferrer"
     :href="link"
     :alt="alt"
   >

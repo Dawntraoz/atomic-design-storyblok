@@ -1,10 +1,17 @@
 <template>
   <figure class="pb-6">
     <img
-      :src="imageSrc"
+      :src="
+        imageSrc.replace(
+          '//a.storyblok.com',
+          '//img2.storyblok.com/250x250/filters:format(jpg)'
+        )
+      "
       :alt="imageAlt"
       :class="colors[color]"
-      class="rounded-full border-t-16 w-64 h-64 object-cover rounded-full"
+      class="rounded-full border-t-16 object-cover rounded-full"
+      width="250"
+      height="250"
     />
   </figure>
 </template>

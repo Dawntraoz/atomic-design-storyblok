@@ -4,6 +4,7 @@
   font-family: 'Gilroy Bold';
   font-style: normal;
   font-weight: bold;
+  font-display: swap;
   src: local('Gilroy Bold'),
     url('~assets/fonts/Gilroy-Bold.woff') format('woff');
 }

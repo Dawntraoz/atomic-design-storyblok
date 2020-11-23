@@ -11,7 +11,7 @@
       :icon-alt="blok.icon.alt"
     />
     <Heading tag="h4" :content="blok.name" class="font-text" />
-    <Paragraph class="text-md text-gray-500 pb-4" :content="blok.description" />
+    <Paragraph class="text-md text-gray-600 pb-4" :content="blok.description" />
   </article>
 </template>
 
