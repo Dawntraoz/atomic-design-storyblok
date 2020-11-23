@@ -34,6 +34,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    'nuxt-i18n',
     [
       'storyblok-nuxt',
       {
@@ -42,6 +43,40 @@ export default {
       },
     ],
   ],
+
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        name: 'EN',
+      },
+      {
+        code: 'es',
+        name: 'ES',
+      },
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          services: 'Our services',
+          team: 'Our team',
+        },
+        es: {
+          services: 'Nuestros servicios',
+          team: 'Nuestro equipo',
+        },
+      },
+    },
+    parsePages: false,
+    pages: {
+      '_slug/index': {
+        en: '/:slug',
+        es: '/:slug',
+      },
+    },
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},

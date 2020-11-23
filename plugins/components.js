@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 /* Templates */
-import Page from '~/components/Page.vue'
+import Template from '~/components/Template.vue'
 
 /* Organisms */
 import Services from '~/components/organisms/Services.vue'
@@ -12,7 +12,7 @@ import HeadingSection from '~/components/molecules/HeadingSection.vue'
 import ServiceCard from '~/components/molecules/ServiceCard.vue'
 import MemberCard from '~/components/molecules/MemberCard.vue'
 
-Vue.component('page', Page)
+Vue.component('page-template', Template)
 Vue.component('services', Services)
 Vue.component('team', Team)
 Vue.component('heading-section', HeadingSection)

@@ -14,8 +14,20 @@ export default {
   computed: {
     links() {
       return [
-        { link: '/en/blog', content: 'Blog' },
-        { link: '/en/our-services', content: 'Our services' },
+        {
+          link: this.localePath({
+            name: 'slug',
+            params: { slug: 'our-services' },
+          }),
+          content: this.$t('services'),
+        },
+        {
+          link: this.localePath({
+            name: 'slug',
+            params: { slug: 'our-team' },
+          }),
+          content: this.$t('team'),
+        },
       ]
     },
   },

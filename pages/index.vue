@@ -18,7 +18,7 @@ export default {
 
     // Load the JSON from the API - loadig the page content (any other page)
     return context.app.$storyapi
-      .get('cdn/stories/en/home', {
+      .get('cdn/stories' + context.route.path + '/home', {
         version,
       })
       .then((res) => {

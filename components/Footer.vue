@@ -8,7 +8,7 @@
           set set globally (included in every page)."
         />
       </div>
-      <LinkSection title="Support" :links="links.support" />
+      <LinkSection title="Support" :links="internalLinks" />
       <LinkSection title="Links" :links="links.links" />
       <LinkSection title="Contact" :links="links.contact" />
     </div>
@@ -20,7 +20,7 @@
         />
         <LinkList
           class="order-first md:order-none flex space-x-3"
-          :links="languages"
+          :links="availableLocalesLinks"
         />
       </div>
     </div>
@@ -32,7 +32,6 @@ export default {
   data() {
     return {
       links: {
-        support: [{ link: '/en/our-services', content: 'Our Services' }],
         links: [
           {
             link: 'https://twitter.com/dawntraoz/',
@@ -81,11 +80,44 @@ export default {
           },
         ],
       },
-      languages: [
-        { link: '/', content: 'EN', white: true },
-        { link: '/es', content: 'ES', white: true },
-      ],
     }
+  },
+  computed: {
+    availableLocalesLinks() {
+      let menuLocales = []
+      this.$i18n.locales
+        .filter((i) => i.code !== this.$i18n.locale)
+        .map(
+          (locale) =>
+            (menuLocales = [
+              {
+                link: this.switchLocalePath(locale.code),
+                content: locale.name,
+                white: true,
+              },
+              ...menuLocales,
+            ])
+        )
+      return menuLocales
+    },
+    internalLinks() {
+      return [
+        {
+          link: this.localePath({
+            name: 'slug',
+            params: { slug: 'our-services' },
+          }),
+          content: this.$t('services'),
+        },
+        {
+          link: this.localePath({
+            name: 'slug',
+            params: { slug: 'our-team' },
+          }),
+          content: this.$t('team'),
+        },
+      ]
+    },
   },
 }
 </script>
