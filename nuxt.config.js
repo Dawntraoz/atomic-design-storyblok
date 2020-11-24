@@ -35,6 +35,10 @@ export default {
     '@nuxtjs/tailwindcss',
   ],
 
+  router: {
+    base: '/atomic-design-storyblok/',
+  },
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/pwa
