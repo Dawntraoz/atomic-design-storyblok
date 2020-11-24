@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="blok" class="px-6">
+  <div v-editable="blok">
     <header class="container text-center">
       <Heading v-if="blok.title" tag="h1" :content="blok.title" />
     </header>

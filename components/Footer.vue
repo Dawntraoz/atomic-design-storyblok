@@ -1,16 +1,15 @@
 <template>
   <footer class="bg-white">
-    <div class="container pt-32 pb-12 flex flex-wrap text-gray-500">
+    <div
+      class="container pt-20 md:pt-32 pb-6 md:pb-12 flex flex-wrap text-gray-500"
+    >
       <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 pr-4 pb-6">
         <Heading tag="h2" content="Blokim" />
-        <Paragraph
-          content="Nuxt.js lets you define the CSS files/modules/libraries you want to
-          set set globally (included in every page)."
-        />
+        <Paragraph :content="$t('footer.desc')" />
       </div>
-      <LinkSection title="Support" :links="internalLinks" />
-      <LinkSection title="Links" :links="links.links" />
-      <LinkSection title="Contact" :links="links.contact" />
+      <LinkSection :title="$t('footer.internal')" :links="internalLinks" />
+      <LinkSection :title="$t('footer.social')" :links="links.links" />
+      <LinkSection :title="$t('footer.contact')" :links="links.contact" />
     </div>
     <div class="py-6 bg-gradient-to-tr from-blue-700 to-blue-800 text-white">
       <div class="container flex flex-wrap justify-between">

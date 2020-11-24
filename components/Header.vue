@@ -4,7 +4,10 @@
       <nuxt-link to="/">
         <Heading tag="h2" content="Blokim" />
       </nuxt-link>
-      <LinkList class="flex py-2 space-x-12" :links="links" />
+      <LinkList
+        class="flex flex-col md:flex-row items-end md:items-center py-2 space-y-2 md:space-y-0 md:space-x-12"
+        :links="links"
+      />
     </nav>
   </header>
 </template>

@@ -14,9 +14,6 @@ module.exports = {
         medium: '14px',
         large: '20px',
       },
-      borderWidth: {
-        16: '16px',
-      },
       boxShadow: {
         '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.1)',
       },
@@ -158,7 +155,7 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: '1rem',
+      padding: '1.5rem',
     },
     cursor: {
       auto: 'auto',

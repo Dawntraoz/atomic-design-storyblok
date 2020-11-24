@@ -77,10 +77,24 @@ export default {
         en: {
           services: 'Our services',
           team: 'Our team',
+          footer: {
+            desc:
+              'Following atomic design will help you integrate your design with the frontend and backend.',
+            internal: 'Internal links',
+            social: 'Social media',
+            contact: 'Contact',
+          },
         },
         es: {
           services: 'Nuestros servicios',
           team: 'Nuestro equipo',
+          footer: {
+            desc:
+              'Seguir Atomic Design te ayudará a integrar tu diseño con el frontend y el backend.',
+            internal: 'Links internos',
+            social: 'Social media',
+            contact: 'Contacto',
+          },
         },
       },
     },

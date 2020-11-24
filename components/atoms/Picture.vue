@@ -1,5 +1,5 @@
 <template>
-  <figure class="pb-6">
+  <figure :class="colors[color]" class="mb-6 rounded-full bg-red-500 pt-4">
     <img
       :src="
         imageSrc.replace(
@@ -8,8 +8,7 @@
         )
       "
       :alt="imageAlt"
-      :class="colors[color]"
-      class="rounded-full border-t-16 object-cover rounded-full"
+      class="rounded-full object-cover"
       width="250"
       height="250"
     />
@@ -35,10 +34,10 @@ export default {
   data() {
     return {
       colors: {
-        orange: 'border-yellow-500',
-        purple: 'border-purple-500',
-        blue: 'border-blue-500',
-        green: 'border-green-500',
+        orange: 'bg-yellow-500',
+        purple: 'bg-purple-500',
+        blue: 'bg-blue-500',
+        green: 'bg-green-500',
       },
     }
   },
