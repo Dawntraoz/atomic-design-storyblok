@@ -1,7 +1,7 @@
 <template>
   <header class="py-6">
     <nav class="container flex justify-between">
-      <nuxt-link to="/">
+      <nuxt-link :to="availableLocaleLink">
         <Heading tag="h2" content="Blokim" />
       </nuxt-link>
       <LinkList
@@ -15,6 +15,11 @@
 <script>
 export default {
   computed: {
+    availableLocaleLink() {
+      return this.$i18n.locales
+        .filter((i) => i.code === this.$i18n.locale)
+        .map((locale) => (locale.code === 'en' ? '/' : `/${locale.code}`))[0]
+    },
     links() {
       return [
         {
