@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import { translatedSlug } from '~/helpers/translatedSlug'
+
 export default {
   asyncData(context) {
     // This what would we do in real project
@@ -21,7 +23,11 @@ export default {
       .get('cdn/stories' + context.route.path, {
         version,
       })
-      .then((res) => {
+      .then(async (res) => {
+        await context.store.dispatch(
+          'i18n/setRouteParams',
+          translatedSlug(res.data.story)
+        )
         return res.data
       })
       .catch((res) => {

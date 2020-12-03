@@ -47,7 +47,7 @@ export default {
     [
       'storyblok-nuxt',
       {
-        accessToken: '',
+        accessToken: 'o43gD2GN0DfTL0c7prbG6Qtt',
         cacheProvider: 'memory',
       },
     ],
@@ -77,6 +77,8 @@ export default {
         en: {
           services: 'Our services',
           team: 'Our team',
+          servicesUrl: 'our-services',
+          teamUrl: 'our-team',
           footer: {
             desc:
               'Following atomic design will help you integrate your design with the frontend and backend.',
@@ -88,6 +90,8 @@ export default {
         es: {
           services: 'Nuestros servicios',
           team: 'Nuestro equipo',
+          servicesUrl: 'nuestros-servicios',
+          teamUrl: 'nuestro-equipo',
           footer: {
             desc:
               'Seguir Atomic Design te ayudará a integrar tu diseño con el frontend y el backend.',

@@ -104,14 +104,14 @@ export default {
         {
           link: this.localePath({
             name: 'slug',
-            params: { slug: 'our-services' },
+            params: { slug: this.$t('servicesUrl') },
           }),
           content: this.$t('services'),
         },
         {
           link: this.localePath({
             name: 'slug',
-            params: { slug: 'our-team' },
+            params: { slug: this.$t('teamUrl') },
           }),
           content: this.$t('team'),
         },
