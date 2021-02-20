@@ -1,1 +1,0 @@
-window.__NUXT__={staticAssetsBase:"\u002Fatomic-design-storyblok\u002F_nuxt\u002Fstatic\u002F1611263228",layout:"default",error:null,state:{i18n:{routeParams:{en:{slug:"our-team"},es:{slug:"nuestro-equipo"}}}},serverRendered:true,routePath:"\u002Four-team",config:{}};
