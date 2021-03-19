@@ -9,7 +9,7 @@
       :image-src="blok.picture.filename"
       :image-alt="blok.picture.alt"
     />
-    <Heading tag="h4" :content="blok.name" class="font-text" />
+    <Heading tag="h4" :content="blok.name" />
     <Paragraph class="text-md text-gray-500" :content="blok.job_title" />
   </article>
 </template>
