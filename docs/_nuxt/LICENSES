@@ -33,6 +33,12 @@
 
 
 /*!
+ * storyblok-js-client v3.3.1
+ * Universal JavaScript SDK for Storyblok's API
+ * (c) 2020-2021 Stobylok Team
+ */
+
+/*!
  * vue-client-only v2.0.0
  * (c) 2019-present egoist <0x142857@gmail.com>
  * Released under the MIT License.
