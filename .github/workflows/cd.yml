@@ -25,6 +25,8 @@ jobs:
 
       - name: Generate
         run: yarn run generate
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
