@@ -13,36 +13,40 @@
 import { translatedSlug } from '~/helpers/translatedSlug'
 
 export default {
-  asyncData(context) {
-    // This what would we do in real project
+  async asyncData(context) {
     const version =
       context.query._storyblok || context.isDev ? 'draft' : 'published'
+    const lang =
+      context.app.i18n.locale === 'en' ? '' : `/${context.app.i18n.locale}`
+    const slug = context.params.slug
 
-    // Load the JSON from the API - loadig the page content (any other page)
-    return context.app.$storyapi
-      .get('cdn/stories' + context.route.path, {
-        version,
-      })
-      .then(async (res) => {
-        await context.store.dispatch(
-          'i18n/setRouteParams',
-          translatedSlug(res.data.story)
-        )
-        return res.data
-      })
-      .catch((res) => {
-        if (!res.response) {
-          context.error({
-            statusCode: 404,
-            message: 'Failed to receive content form api',
-          })
-        } else {
-          context.error({
-            statusCode: res.response.status,
-            message: res.response.data,
-          })
+    try {
+      const response = await context.app.$storyapi.get(
+        `cdn/stories${lang}/${slug}`,
+        {
+          version,
         }
-      })
+      )
+
+      await context.store.dispatch(
+        'i18n/setRouteParams',
+        translatedSlug(response.data.story)
+      )
+
+      return { story: response.data.story }
+    } catch (e) {
+      if (!e.response) {
+        context.error({
+          statusCode: 404,
+          message: 'Failed to receive content form api',
+        })
+      } else {
+        context.error({
+          statusCode: e.response.status,
+          message: e.response.data,
+        })
+      }
+    }
   },
   data() {
     return {

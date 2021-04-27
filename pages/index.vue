@@ -11,14 +11,18 @@
 
 <script>
 export default {
+  name: 'Homepage',
   asyncData(context) {
     // This what would we do in real project
     const version =
       context.query._storyblok || context.isDev ? 'draft' : 'published'
 
+    const lang =
+      context.app.i18n.locale === 'en' ? '' : `/${context.app.i18n.locale}`
+
     // Load the JSON from the API - loadig the page content (any other page)
     return context.app.$storyapi
-      .get('cdn/stories' + context.route.path + '/home', {
+      .get(`cdn/stories${lang}/home`, {
         version,
       })
       .then((res) => {
