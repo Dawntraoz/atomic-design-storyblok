@@ -16,17 +16,14 @@ export default {
   async asyncData(context) {
     const version =
       context.query._storyblok || context.isDev ? 'draft' : 'published'
-    const lang =
-      context.app.i18n.locale === 'en' ? '' : `/${context.app.i18n.locale}`
+    const language = context.app.i18n.locale
     const slug = context.params.slug
 
     try {
-      const response = await context.app.$storyapi.get(
-        `cdn/stories${lang}/${slug}`,
-        {
-          version,
-        }
-      )
+      const response = await context.app.$storyapi.get(`cdn/stories/${slug}`, {
+        language,
+        version,
+      })
 
       await context.store.dispatch(
         'i18n/setRouteParams',
@@ -54,18 +51,20 @@ export default {
     }
   },
   mounted() {
-    // Use the input event for instant update of content
-    this.$storybridge.on('input', (event) => {
-      if (event.story.id === this.story.id) {
-        this.story.content = event.story.content
-      }
-    })
-    // Use the bridge to listen the events
-    this.$storybridge.on(['published', 'change'], (event) => {
-      // window.location.reload()
-      this.$nuxt.$router.go({
-        path: this.$nuxt.$router.currentRoute,
-        force: true,
+    this.$storybridge(() => {
+      const storyblokInstance = new window.StoryblokBridge()
+      // Use the input event for instant update of content
+      storyblokInstance.on('input', (event) => {
+        if (event.story.id === this.story.id) {
+          this.story.content = event.story.content
+        }
+      })
+      // Use the bridge to listen the events
+      storyblokInstance.on(['published', 'change'], (event) => {
+        this.$nuxt.$router.go({
+          path: this.$nuxt.$router.currentRoute,
+          force: true,
+        })
       })
     })
   },

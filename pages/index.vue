@@ -16,13 +16,12 @@ export default {
     // This what would we do in real project
     const version =
       context.query._storyblok || context.isDev ? 'draft' : 'published'
-
-    const lang =
-      context.app.i18n.locale === 'en' ? '' : `/${context.app.i18n.locale}`
+    const language = context.app.i18n.locale
 
     // Load the JSON from the API - loadig the page content (any other page)
     return context.app.$storyapi
-      .get(`cdn/stories${lang}/home`, {
+      .get(`cdn/stories/home`, {
+        language,
         version,
       })
       .then((res) => {
@@ -48,18 +47,20 @@ export default {
     }
   },
   mounted() {
-    // Use the input event for instant update of content
-    this.$storybridge.on('input', (event) => {
-      if (event.story.id === this.story.id) {
-        this.story.content = event.story.content
-      }
-    })
-    // Use the bridge to listen the events
-    this.$storybridge.on(['published', 'change'], (event) => {
-      // window.location.reload()
-      this.$nuxt.$router.go({
-        path: this.$nuxt.$router.currentRoute,
-        force: true,
+    this.$storybridge(() => {
+      const storyblokInstance = new window.StoryblokBridge()
+      // Use the input event for instant update of content
+      storyblokInstance.on('input', (event) => {
+        if (event.story.id === this.story.id) {
+          this.story.content = event.story.content
+        }
+      })
+      // Use the bridge to listen the events
+      storyblokInstance.on(['published', 'change'], (event) => {
+        this.$nuxt.$router.go({
+          path: this.$nuxt.$router.currentRoute,
+          force: true,
+        })
       })
     })
   },
