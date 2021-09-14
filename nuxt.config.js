@@ -38,6 +38,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@/modules/generator',
   ],
 
   router: {
@@ -60,7 +61,14 @@ export default {
         cacheProvider: 'memory',
       },
     ],
+    '@nuxtjs/sitemap',
   ],
+
+  sitemap: {
+    hostname: 'https://dawntraoz.github.io',
+    gzip: true,
+    trailingSlash: true,
+  },
 
   pwa: {
     meta: {
