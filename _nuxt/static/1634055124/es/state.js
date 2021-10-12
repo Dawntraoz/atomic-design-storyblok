@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fatomic-design-storyblok\u002F_nuxt\u002Fstatic\u002F1634055124",layout:"default",error:a,state:{i18n:{routeParams:{}}},serverRendered:true,routePath:"\u002Fes",config:{_app:{basePath:"\u002Fatomic-design-storyblok\u002F",assetsPath:"\u002Fatomic-design-storyblok\u002F_nuxt\u002F",cdnURL:a}}}}(null));
