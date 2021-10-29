@@ -1,5 +1,24 @@
 /*!
-  * vue-router v3.5.2
+ * storyblok-js-client v0.0.0-development
+ * Universal JavaScript SDK for Storyblok's API
+ * (c) 2020-2021 Stobylok Team
+ */
+
+/*!
+ * vue-client-only v0.0.0-semantic-release
+ * (c) 2021-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/*!
+ * vue-no-ssr v1.1.1
+ * (c) 2018-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+
+/*!
+  * vue-router v3.5.3
   * (c) 2021 Evan You
   * @license MIT
   */
@@ -21,23 +40,4 @@
  * vuex v3.6.2
  * (c) 2021 Evan You
  * @license MIT
- */
-
-
-/*!
- * storyblok-js-client v0.0.0-development
- * Universal JavaScript SDK for Storyblok's API
- * (c) 2020-2021 Stobylok Team
- */
-
-/*!
- * vue-client-only v0.0.0-semantic-release
- * (c) 2021-present egoist <0x142857@gmail.com>
- * Released under the MIT License.
- */
-
-/*!
- * vue-no-ssr v1.1.1
- * (c) 2018-present egoist <0x142857@gmail.com>
- * Released under the MIT License.
  */
