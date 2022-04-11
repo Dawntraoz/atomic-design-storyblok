@@ -22,7 +22,7 @@
     "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/tailwindcss": "^5.0.0-4",
-    "@storyblok/nuxt": "^2.0.5",
+    "@storyblok/nuxt": "^3.0.3",
     "@vue/test-utils": "^2.0.0-rc.17",
     "autoprefixer": "10.4.2",
     "axios": "^0.26.0",
