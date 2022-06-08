@@ -1,4 +1,11 @@
 /*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <http://feross.org>
+ * @license  MIT
+ */
+
+/*!
  * storyblok-js-client v0.0.0-development
  * Universal JavaScript SDK for Storyblok's API
  * (c) 2020-2022 Stobylok Team
@@ -15,6 +22,8 @@
  * (c) 2018-present egoist <0x142857@gmail.com>
  * Released under the MIT License.
  */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
 
 /*!
