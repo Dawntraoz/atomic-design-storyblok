@@ -51,7 +51,7 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/i18n',
     [
-      '@storyblok/nuxt',
+      '@storyblok/nuxt-2/module',
       {
         accessToken: process.env.API_KEY,
         cacheProvider: 'memory',
@@ -93,8 +93,7 @@ export default {
           servicesUrl: 'our-services',
           teamUrl: 'our-team',
           footer: {
-            desc:
-              'Following atomic design will help you integrate your design with the frontend and backend.',
+            desc: 'Following atomic design will help you integrate your design with the frontend and backend.',
             internal: 'Internal links',
             social: 'Social media',
             contact: 'Contact',
@@ -106,8 +105,7 @@ export default {
           servicesUrl: 'nuestros-servicios',
           teamUrl: 'nuestro-equipo',
           footer: {
-            desc:
-              'Seguir Atomic Design te ayudará a integrar tu diseño con el frontend y el backend.',
+            desc: 'Seguir Atomic Design te ayudará a integrar tu diseño con el frontend y el backend.',
             internal: 'Links internos',
             social: 'Social media',
             contact: 'Contacto',
